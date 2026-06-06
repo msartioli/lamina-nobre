@@ -36,27 +36,25 @@ export default function Hero() {
 
         <div className="section-container relative z-10">
           <div className="grid items-center gap-8 pb-10 pt-24 md:gap-10 md:pb-12 md:pt-28 lg:grid-cols-2 lg:gap-12">
-            <div className="flex flex-col">
-              <span className="mb-4 inline-flex w-fit items-center gap-3 font-sans text-[10px] font-semibold uppercase tracking-[0.3em] text-barber-gold md:text-xs">
-                <span className="h-px w-6 bg-barber-gold/50" aria-hidden="true" />
+            <div className="flex w-full flex-col items-start text-left">
+              <p className="mb-4 font-sans text-[10px] font-semibold uppercase tracking-[0.3em] text-barber-gold md:text-xs">
                 {SITE_TAGLINE}
-                <span className="hidden sm:inline">&middot; São Paulo</span>
-              </span>
+                <span className="hidden sm:inline"> &middot; São Paulo</span>
+              </p>
 
-              <h1 className="font-display text-4xl font-semibold leading-[1.1] tracking-wide text-white sm:text-5xl lg:text-[3.5rem]">
-                Precisão no corte.
-                <br />
-                <span className="bg-gradient-to-r from-barber-gold via-barber-gold-light to-barber-gold bg-clip-text text-transparent">
+              <h1 className="font-display text-4xl font-semibold leading-[1.15] tracking-wide text-white sm:text-5xl lg:text-[3.5rem]">
+                <span className="block">Precisão no corte.</span>
+                <span className="mt-1 block bg-gradient-to-r from-barber-gold via-barber-gold-light to-barber-gold bg-clip-text text-transparent">
                   Presença no estilo.
                 </span>
               </h1>
 
-              <p className="mt-5 max-w-lg font-sans text-base leading-relaxed text-barber-cream/75 md:text-lg">
+              <p className="mt-5 max-w-lg text-left font-sans text-base leading-relaxed text-barber-cream/75 md:text-lg">
                 Cortes modernos, barba alinhada e atendimento premium para homens que valorizam
                 imagem, cuidado e personalidade.
               </p>
 
-              <div className="mt-8 flex flex-col gap-4 sm:flex-row sm:items-center">
+              <div className="mt-8 flex w-full flex-col items-start gap-4 sm:flex-row sm:items-center">
                 <WhatsAppButton size="lg" />
                 <a
                   href="#sobre"
