@@ -8,13 +8,17 @@
   }
 
   body {
-    @apply bg-barber-black font-sans text-barber-cream antialiased;
+    @apply overflow-x-hidden bg-barber-black font-sans text-barber-cream antialiased;
   }
 }
 
 @layer components {
   .section-padding {
-    @apply px-5 py-20 md:px-8 md:py-28 lg:px-12;
+    @apply px-4 py-16 sm:px-6 md:py-20 lg:px-8 lg:py-24;
+  }
+
+  .section-container {
+    @apply mx-auto max-w-7xl px-4 sm:px-6 lg:px-8;
   }
 
   .gold-line {
@@ -22,34 +26,23 @@
   }
 
   .premium-card {
-    @apply border border-barber-slate/40 bg-barber-graphite/60 backdrop-blur-sm transition-all duration-500;
+    @apply border border-barber-slate/40 bg-barber-graphite/60 transition-all duration-500;
   }
 
   .premium-card:hover {
-    @apply border-barber-gold/30 shadow-[0_12px_40px_rgba(0,0,0,0.35)];
-  }
-
-  .gold-glow {
-    box-shadow:
-      0 0 0 1px rgba(201, 169, 98, 0.15),
-      0 20px 60px rgba(0, 0, 0, 0.5),
-      0 0 80px rgba(201, 169, 98, 0.08);
+    @apply border-barber-gold/30 shadow-[0_8px_28px_rgba(0,0,0,0.3)];
   }
 }
 
 @layer utilities {
   .animate-on-scroll {
     opacity: 0;
-    transform: translateY(28px);
-    transition: opacity 0.7s ease-out, transform 0.7s ease-out;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
   }
 
   .animate-on-scroll.visible {
     opacity: 1;
     transform: translateY(0);
-  }
-
-  .text-balance {
-    text-wrap: balance;
   }
 }

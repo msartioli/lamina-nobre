@@ -11,7 +11,7 @@ const GALLERY_ITEMS = [
 export default function Gallery() {
   return (
     <section id="galeria" className="section-padding bg-barber-charcoal">
-      <div className="mx-auto max-w-7xl">
+      <div className="section-container">
         <div className="animate-on-scroll">
           <SectionTitle
             label="Galeria"
@@ -20,44 +20,29 @@ export default function Gallery() {
           />
         </div>
 
-        <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-12 lg:gap-6">
+        <div className="grid gap-4 sm:grid-cols-2 lg:gap-5">
           {GALLERY_ITEMS.map((item, index) => (
             <div
               key={item.alt}
               className={`animate-on-scroll group relative overflow-hidden rounded-sm border border-barber-slate/30 ${
-                index === 0
-                  ? 'sm:col-span-2 lg:col-span-7'
-                  : index === 1
-                    ? 'lg:col-span-5'
-                    : index === 2
-                      ? 'lg:col-span-5'
-                      : 'sm:col-span-2 lg:col-span-7'
+                index === 0 ? 'sm:col-span-2' : ''
               }`}
-              style={{ transitionDelay: `${index * 80}ms` }}
+              style={{ transitionDelay: `${index * 60}ms` }}
             >
-              <div
-                className={`overflow-hidden ${index === 0 || index === 3 ? 'aspect-[16/9] lg:aspect-[21/9]' : 'aspect-[4/3]'}`}
-              >
+              <div className={`overflow-hidden ${index === 0 ? 'aspect-[21/9]' : 'aspect-[4/3]'}`}>
                 <img
                   src={item.src}
                   alt={item.alt}
-                  className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
+                  className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.03]"
                   loading="lazy"
                 />
               </div>
 
-              <div className="absolute inset-0 bg-gradient-to-t from-barber-black/80 via-barber-black/20 to-transparent opacity-60 transition-opacity duration-500 group-hover:opacity-90" />
-              <div className="absolute inset-0 bg-barber-gold/0 transition-colors duration-500 group-hover:bg-barber-gold/5" />
-
-              <div className="absolute inset-x-0 bottom-0 translate-y-2 p-6 opacity-0 transition-all duration-500 group-hover:translate-y-0 group-hover:opacity-100">
-                <div className="mb-3 h-px w-10 bg-barber-gold/60" />
-                <p className="font-display text-base tracking-wide text-white md:text-lg">
+              <div className="absolute inset-0 bg-barber-black/0 transition-colors duration-300 group-hover:bg-barber-black/40" />
+              <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-barber-black/80 to-transparent p-4 opacity-80 transition-opacity duration-300 group-hover:opacity-100">
+                <p className="font-display text-sm tracking-wide text-white md:text-base">
                   {item.alt}
                 </p>
-              </div>
-
-              <div className="absolute left-4 top-4 rounded-sm border border-barber-gold/20 bg-barber-black/50 px-3 py-1 font-sans text-[10px] uppercase tracking-widebrand text-barber-gold/80 backdrop-blur-sm transition-opacity duration-300 group-hover:opacity-0">
-                0{index + 1}
               </div>
             </div>
           ))}

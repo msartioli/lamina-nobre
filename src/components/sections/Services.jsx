@@ -9,7 +9,7 @@ function formatPrice(value) {
 export default function Services() {
   return (
     <section id="servicos" className="section-padding bg-barber-black">
-      <div className="mx-auto max-w-7xl">
+      <div className="section-container">
         <div className="animate-on-scroll">
           <SectionTitle
             label="Serviços"
@@ -22,36 +22,34 @@ export default function Services() {
           {SERVICES.map((service, index) => (
             <div
               key={service.name}
-              className={`animate-on-scroll group relative overflow-hidden rounded-sm border p-8 transition-all duration-500 hover:-translate-y-1 ${
+              className={`animate-on-scroll group flex min-h-[160px] flex-col justify-between rounded-sm border p-6 transition-colors duration-300 ${
                 service.featured
-                  ? 'border-barber-gold/25 bg-gradient-to-br from-barber-graphite to-barber-charcoal shadow-[0_8px_32px_rgba(0,0,0,0.3)] hover:border-barber-gold/40 hover:shadow-[0_16px_48px_rgba(201,169,98,0.1)]'
-                  : 'border-barber-slate/30 bg-barber-graphite/40 hover:border-barber-gold/20 hover:shadow-[0_12px_40px_rgba(0,0,0,0.35)]'
+                  ? 'border-barber-gold/25 bg-barber-graphite'
+                  : 'border-barber-slate/30 bg-barber-graphite/50 hover:border-barber-gold/20'
               }`}
-              style={{ transitionDelay: `${index * 80}ms` }}
+              style={{ transitionDelay: `${index * 60}ms` }}
             >
-              <div
-                className="pointer-events-none absolute -right-8 -top-8 h-24 w-24 rounded-full bg-barber-gold/5 blur-2xl transition-opacity duration-500 group-hover:bg-barber-gold/10"
-                aria-hidden="true"
-              />
-
-              {service.featured && (
-                <span className="absolute right-4 top-4 rounded-sm border border-barber-gold/30 bg-barber-black/40 px-2 py-0.5 font-sans text-[9px] font-semibold uppercase tracking-[0.2em] text-barber-gold backdrop-blur-sm">
-                  Popular
-                </span>
-              )}
-
-              <h3 className="font-display text-xl font-medium tracking-wide text-white">
-                {service.name}
-              </h3>
-              <p className="mt-5 font-sans text-3xl font-semibold text-barber-gold">
-                {formatPrice(service.price)}
-              </p>
-              <div className="mt-6 h-px w-10 bg-gradient-to-r from-barber-gold/50 to-transparent transition-all duration-500 group-hover:w-20" />
+              <div>
+                {service.featured && (
+                  <span className="mb-3 inline-block font-sans text-[9px] font-semibold uppercase tracking-[0.2em] text-barber-gold">
+                    Popular
+                  </span>
+                )}
+                <h3 className="font-display text-lg font-medium tracking-wide text-white md:text-xl">
+                  {service.name}
+                </h3>
+              </div>
+              <div>
+                <p className="mt-3 font-sans text-2xl font-semibold text-barber-gold md:text-3xl">
+                  {formatPrice(service.price)}
+                </p>
+                <div className="mt-4 h-px w-10 bg-barber-gold/40 transition-all duration-300 group-hover:w-16" />
+              </div>
             </div>
           ))}
         </div>
 
-        <div className="animate-on-scroll mt-16 text-center">
+        <div className="animate-on-scroll mt-10 text-center md:mt-12">
           <WhatsAppButton />
         </div>
       </div>

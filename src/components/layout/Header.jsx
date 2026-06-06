@@ -28,7 +28,7 @@ export default function Header() {
           : 'border-b border-transparent bg-gradient-to-b from-barber-black/60 to-transparent'
       }`}
     >
-      <div className="mx-auto flex max-w-7xl items-center justify-between px-5 py-5 md:px-8 lg:px-12">
+      <div className="section-container flex items-center justify-between py-4 md:py-5">
         <a href="#" className="group transition-opacity hover:opacity-90">
           <BrandLogo size="md" />
         </a>
