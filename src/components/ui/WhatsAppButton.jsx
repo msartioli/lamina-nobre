@@ -14,9 +14,9 @@ export default function WhatsAppButton({
   size = 'md',
 }) {
   const sizeClasses = {
-    sm: 'px-5 py-2.5 text-sm',
-    md: 'px-7 py-3.5 text-sm',
-    lg: 'px-8 py-4 text-base',
+    sm: 'px-5 py-2.5 text-xs tracking-wide',
+    md: 'px-7 py-3.5 text-sm tracking-wide',
+    lg: 'px-9 py-4 text-sm tracking-wider md:text-base',
   }
 
   return (
@@ -24,9 +24,9 @@ export default function WhatsAppButton({
       href={WHATSAPP_URL}
       target="_blank"
       rel="noopener noreferrer"
-      className={`inline-flex items-center justify-center gap-2.5 rounded-sm bg-barber-gold font-medium text-barber-black transition-all duration-300 hover:bg-barber-gold-light hover:shadow-[0_8px_30px_rgba(201,169,98,0.25)] ${sizeClasses[size]} ${className}`}
+      className={`group inline-flex items-center justify-center gap-2.5 rounded-sm border border-barber-gold/30 bg-gradient-to-r from-barber-gold to-barber-gold-light font-semibold uppercase text-barber-black shadow-[0_4px_24px_rgba(201,169,98,0.2)] transition-all duration-500 hover:-translate-y-0.5 hover:border-barber-gold/50 hover:shadow-[0_12px_40px_rgba(201,169,98,0.35)] ${sizeClasses[size]} ${className}`}
     >
-      <WhatsAppIcon className="h-5 w-5 shrink-0" />
+      <WhatsAppIcon className="h-5 w-5 shrink-0 transition-transform duration-300 group-hover:scale-110" />
       {children}
     </a>
   )

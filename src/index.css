@@ -20,6 +20,21 @@
   .gold-line {
     @apply mx-auto h-px w-16 bg-barber-gold/60;
   }
+
+  .premium-card {
+    @apply border border-barber-slate/40 bg-barber-graphite/60 backdrop-blur-sm transition-all duration-500;
+  }
+
+  .premium-card:hover {
+    @apply border-barber-gold/30 shadow-[0_12px_40px_rgba(0,0,0,0.35)];
+  }
+
+  .gold-glow {
+    box-shadow:
+      0 0 0 1px rgba(201, 169, 98, 0.15),
+      0 20px 60px rgba(0, 0, 0, 0.5),
+      0 0 80px rgba(201, 169, 98, 0.08);
+  }
 }
 
 @layer utilities {
@@ -32,5 +47,9 @@
   .animate-on-scroll.visible {
     opacity: 1;
     transform: translateY(0);
+  }
+
+  .text-balance {
+    text-wrap: balance;
   }
 }

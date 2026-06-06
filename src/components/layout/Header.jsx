@@ -22,10 +22,10 @@ export default function Header() {
 
   return (
     <header
-      className={`fixed inset-x-0 top-0 z-40 border-b transition-all duration-500 ${
+      className={`fixed inset-x-0 top-0 z-40 transition-all duration-500 ${
         scrolled || menuOpen
-          ? 'border-barber-slate/30 bg-barber-black/95 shadow-lg shadow-black/30 backdrop-blur-md'
-          : 'border-transparent bg-transparent'
+          ? 'border-b border-barber-gold/10 bg-barber-black/90 shadow-[0_8px_32px_rgba(0,0,0,0.4)] backdrop-blur-xl'
+          : 'border-b border-transparent bg-gradient-to-b from-barber-black/60 to-transparent'
       }`}
     >
       <div className="mx-auto flex max-w-7xl items-center justify-between px-5 py-5 md:px-8 lg:px-12">
@@ -33,12 +33,12 @@ export default function Header() {
           <BrandLogo size="md" />
         </a>
 
-        <nav className="hidden items-center gap-10 lg:flex">
+        <nav className="hidden items-center gap-9 lg:flex">
           {NAV_LINKS.map((link) => (
             <a
               key={link.href}
               href={link.href}
-              className="relative text-[13px] font-medium uppercase tracking-widebrand text-barber-cream/75 transition-colors duration-300 after:absolute after:-bottom-1 after:left-0 after:h-px after:w-0 after:bg-barber-gold after:transition-all after:duration-300 hover:text-barber-gold hover:after:w-full"
+              className="relative font-sans text-[12px] font-medium uppercase tracking-[0.2em] text-barber-cream/70 transition-colors duration-300 after:absolute after:-bottom-2 after:left-0 after:h-px after:w-0 after:bg-barber-gold after:transition-all after:duration-300 hover:text-barber-gold hover:after:w-full"
             >
               {link.label}
             </a>
@@ -75,7 +75,7 @@ export default function Header() {
       </div>
 
       <div
-        className={`fixed inset-0 top-[76px] z-30 bg-barber-black/98 backdrop-blur-lg transition-all duration-500 lg:hidden ${
+        className={`fixed inset-0 top-[84px] z-30 bg-barber-black/98 backdrop-blur-xl transition-all duration-500 lg:hidden ${
           menuOpen ? 'visible opacity-100' : 'invisible opacity-0'
         }`}
       >
@@ -85,7 +85,7 @@ export default function Header() {
               key={link.href}
               href={link.href}
               onClick={() => setMenuOpen(false)}
-              className="border-b border-barber-slate/40 py-4 font-medium uppercase tracking-widebrand text-barber-cream/90 transition-colors hover:text-barber-gold"
+              className="border-b border-barber-slate/30 py-4 font-medium uppercase tracking-[0.2em] text-barber-cream/90 transition-colors hover:text-barber-gold"
             >
               {link.label}
             </a>
