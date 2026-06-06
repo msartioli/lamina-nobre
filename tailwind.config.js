@@ -16,8 +16,12 @@ export default {
         },
       },
       fontFamily: {
-        display: ['"Playfair Display"', 'Georgia', 'serif'],
-        sans: ['"DM Sans"', 'system-ui', 'sans-serif'],
+        display: ['Cinzel', 'Georgia', 'serif'],
+        sans: ['Manrope', 'system-ui', 'sans-serif'],
+      },
+      letterSpacing: {
+        brand: '0.16em',
+        widebrand: '0.22em',
       },
       animation: {
         'fade-in': 'fadeIn 0.8s ease-out forwards',

@@ -35,8 +35,8 @@ export default function Services() {
                 </span>
               )}
 
-              <h3 className="font-display text-xl font-medium text-white">{service.name}</h3>
-              <p className="mt-4 font-display text-3xl font-semibold text-barber-gold">
+              <h3 className="font-display text-xl font-medium tracking-wide text-white">{service.name}</h3>
+              <p className="mt-4 font-sans text-3xl font-semibold text-barber-gold">
                 {formatPrice(service.price)}
               </p>
               <div className="mt-6 h-px w-8 bg-barber-gold/40 transition-all duration-500 group-hover:w-16" />

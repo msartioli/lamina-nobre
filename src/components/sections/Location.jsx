@@ -35,7 +35,7 @@ export default function Location() {
 
           <div className="animate-on-scroll overflow-hidden border border-barber-slate/30">
             <iframe
-              title="Localização da Barbearia Moderna"
+              title="Localização da Lâmina Nobre"
               src={mapSrc}
               className="aspect-[4/3] w-full grayscale transition-all duration-500 hover:grayscale-0 lg:aspect-auto lg:h-full lg:min-h-[360px]"
               loading="lazy"

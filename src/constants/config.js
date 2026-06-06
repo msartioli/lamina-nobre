@@ -1,7 +1,8 @@
-export const SITE_NAME = 'Barbearia Moderna'
+export const SITE_NAME = 'Lâmina Nobre'
+export const SITE_TAGLINE = 'Barbearia & Estilo Masculino'
 
 export const WHATSAPP_URL =
-  'https://wa.me/5511999999999?text=Olá,%20quero%20agendar%20um%20horário%20na%20Barbearia%20Moderna'
+  'https://wa.me/5511999999999?text=Olá,%20quero%20agendar%20um%20horário%20na%20Lâmina%20Nobre.'
 
 export const ADDRESS = 'Rua Exemplo, 123 — São Paulo/SP'
 export const HOURS = 'Segunda a sábado, das 09h às 20h'
@@ -21,10 +22,10 @@ export const ASSETS = {
   aboutService: '/assets/barbearia-moderna/sobre-atendimento-premium.png',
   aboutBeard: '/assets/barbearia-moderna/sobre-servico-barba.png',
   gallery: [
-  '/assets/barbearia-moderna/galeria-01-ambiente-premium.png',
-  '/assets/barbearia-moderna/galeria-02-corte-degrade.png',
-  '/assets/barbearia-moderna/galeria-03-acabamento-barba.png',
-  '/assets/barbearia-moderna/galeria-04-cadeira-premium.png',
+    '/assets/barbearia-moderna/galeria-01-ambiente-premium.png',
+    '/assets/barbearia-moderna/galeria-02-corte-degrade.png',
+    '/assets/barbearia-moderna/galeria-03-acabamento-barba.png',
+    '/assets/barbearia-moderna/galeria-04-cadeira-premium.png',
   ],
   barbers: {
     rafael: '/assets/barbearia-moderna/barbeiro-rafael-costa.png',

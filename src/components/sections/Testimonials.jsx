@@ -17,7 +17,7 @@ export default function Testimonials() {
           <SectionTitle
             label="Depoimentos"
             title="O que nossos clientes dizem"
-            subtitle="A experiência de quem já passou pela Barbearia Moderna."
+            subtitle="A experiência de quem já passou pela Lâmina Nobre."
           />
         </div>
 

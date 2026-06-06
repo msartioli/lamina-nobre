@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
-import { NAV_LINKS, SITE_NAME } from '../../constants/config'
+import { NAV_LINKS } from '../../constants/config'
+import BrandLogo from '../ui/BrandLogo'
 import WhatsAppButton from '../ui/WhatsAppButton'
 
 export default function Header() {
@@ -21,26 +22,23 @@ export default function Header() {
 
   return (
     <header
-      className={`fixed inset-x-0 top-0 z-40 transition-all duration-500 ${
+      className={`fixed inset-x-0 top-0 z-40 border-b transition-all duration-500 ${
         scrolled || menuOpen
-          ? 'bg-barber-black/95 shadow-lg shadow-black/20 backdrop-blur-md'
-          : 'bg-transparent'
+          ? 'border-barber-slate/30 bg-barber-black/95 shadow-lg shadow-black/30 backdrop-blur-md'
+          : 'border-transparent bg-transparent'
       }`}
     >
-      <div className="mx-auto flex max-w-7xl items-center justify-between px-5 py-4 md:px-8 lg:px-12">
-        <a
-          href="#"
-          className="font-display text-xl font-semibold tracking-wide text-white md:text-2xl"
-        >
-          {SITE_NAME}
+      <div className="mx-auto flex max-w-7xl items-center justify-between px-5 py-5 md:px-8 lg:px-12">
+        <a href="#" className="group transition-opacity hover:opacity-90">
+          <BrandLogo size="md" />
         </a>
 
-        <nav className="hidden items-center gap-8 lg:flex">
+        <nav className="hidden items-center gap-10 lg:flex">
           {NAV_LINKS.map((link) => (
             <a
               key={link.href}
               href={link.href}
-              className="text-sm text-barber-cream/80 transition-colors duration-300 hover:text-barber-gold"
+              className="relative text-[13px] font-medium uppercase tracking-widebrand text-barber-cream/75 transition-colors duration-300 after:absolute after:-bottom-1 after:left-0 after:h-px after:w-0 after:bg-barber-gold after:transition-all after:duration-300 hover:text-barber-gold hover:after:w-full"
             >
               {link.label}
             </a>
@@ -59,25 +57,25 @@ export default function Header() {
           aria-expanded={menuOpen}
         >
           <span
-            className={`block h-0.5 w-6 bg-white transition-all duration-300 ${
-              menuOpen ? 'translate-y-2 rotate-45' : ''
+            className={`block h-px w-6 bg-barber-gold transition-all duration-300 ${
+              menuOpen ? 'translate-y-[5px] rotate-45' : ''
             }`}
           />
           <span
-            className={`block h-0.5 w-6 bg-white transition-all duration-300 ${
+            className={`block h-px w-6 bg-barber-gold transition-all duration-300 ${
               menuOpen ? 'opacity-0' : ''
             }`}
           />
           <span
-            className={`block h-0.5 w-6 bg-white transition-all duration-300 ${
-              menuOpen ? '-translate-y-2 -rotate-45' : ''
+            className={`block h-px w-6 bg-barber-gold transition-all duration-300 ${
+              menuOpen ? '-translate-y-[5px] -rotate-45' : ''
             }`}
           />
         </button>
       </div>
 
       <div
-        className={`fixed inset-0 top-[72px] z-30 bg-barber-black/98 backdrop-blur-lg transition-all duration-500 lg:hidden ${
+        className={`fixed inset-0 top-[76px] z-30 bg-barber-black/98 backdrop-blur-lg transition-all duration-500 lg:hidden ${
           menuOpen ? 'visible opacity-100' : 'invisible opacity-0'
         }`}
       >
@@ -87,12 +85,12 @@ export default function Header() {
               key={link.href}
               href={link.href}
               onClick={() => setMenuOpen(false)}
-              className="border-b border-barber-slate/50 py-4 text-lg text-barber-cream/90 transition-colors hover:text-barber-gold"
+              className="border-b border-barber-slate/40 py-4 font-medium uppercase tracking-widebrand text-barber-cream/90 transition-colors hover:text-barber-gold"
             >
               {link.label}
             </a>
           ))}
-          <div className="pt-6">
+          <div className="pt-8">
             <WhatsAppButton className="w-full" />
           </div>
         </nav>
