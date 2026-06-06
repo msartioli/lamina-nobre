@@ -1,4 +1,4 @@
-import { ASSETS, SITE_TAGLINE } from '../../constants/config'
+import { ASSETS } from '../../constants/config'
 import WhatsAppButton from '../ui/WhatsAppButton'
 
 const HERO_STRIP = [
@@ -37,10 +37,7 @@ export default function Hero() {
         <div className="section-container relative z-10">
           <div className="grid items-center gap-8 pb-10 pt-24 md:gap-10 md:pb-12 md:pt-28 lg:grid-cols-2 lg:gap-12">
             <div className="flex w-full flex-col items-start text-left">
-              <p className="mb-4 font-sans text-[10px] font-semibold uppercase tracking-[0.3em] text-barber-gold md:text-xs">
-                {SITE_TAGLINE}
-                <span className="hidden sm:inline"> &middot; São Paulo</span>
-              </p>
+              <span className="mb-4 block h-px w-12 bg-barber-gold/50" aria-hidden="true" />
 
               <h1 className="font-display text-4xl font-semibold leading-[1.15] tracking-wide text-white sm:text-5xl lg:text-[3.5rem]">
                 <span className="block">Precisão no corte.</span>
